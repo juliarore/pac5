@@ -4,6 +4,17 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
   text-align: center;
+}
+
+.statistics-placeholder {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+  background-color: #f8f9fa;
 }
