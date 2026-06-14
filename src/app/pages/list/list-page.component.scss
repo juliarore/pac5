@@ -1,0 +1,48 @@
+.students-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+.viewport {
+  height: 500px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.student-row {
+  height: 50px;
+
+  display: grid;
+  grid-template-columns:
+    2fr
+    1fr
+    1fr
+    1fr
+    1fr;
+
+  align-items: center;
+
+  padding: 0 1rem;
+
+  border-bottom: 1px solid #f0f0f0;
+
+  &:nth-child(even) {
+    background-color: #fafafa;
+  }
+}
+
+.aprovat {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.suspes {
+  font-weight: 600;
+  color: #d32f2f;
+}

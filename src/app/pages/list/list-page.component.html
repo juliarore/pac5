@@ -1,1 +1,25 @@
-<p>list-page works!</p>
+<section class="students-container">
+  <h1>Llistat d'alumnes (virtual scroll)</h1>
+
+  <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+    <div
+      *cdkVirtualFor="let student of students; trackBy: trackByStudentId"
+      class="student-row"
+    >
+      <span>{{ student.name }}</span>
+      <span>{{ student.gender }}</span>
+      <span>{{ student.grade }}</span>
+      <span>{{ student.absences }}</span>
+
+      <span>
+        @if (student.grade < 5) {
+          <span class="suspes">Suspès</span>
+        }
+
+        @if (student.grade >= 5) {
+          <span class="aprovat">Aprovat</span>
+        }
+      </span>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</section>
