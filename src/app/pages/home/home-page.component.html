@@ -1,1 +1,40 @@
-<p>home-page works!</p>
+<section class="students-container">
+  <h1>Llistat d'alumnes</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>NOM</th>
+        <th>SEXE</th>
+        <th>NOTA</th>
+        <th>ABSÈNCIES</th>
+        <th>RESULTAT</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (student of students; track student.id) {
+        <tr>
+          <td>{{ student.name }}</td>
+          <td>{{ student.gender }}</td>
+          <td>{{ student.grade }}</td>
+          <td>{{ student.absences }}</td>
+
+          <td>
+            @if (student.grade < 5) {
+              <span class="suspes">Suspès</span>
+            }
+
+            @if (student.grade >= 5) {
+              <span class="aprovat">Aprovat</span>
+            }
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="5">No hi ha alumnes disponibles</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</section>
